@@ -1,1 +1,1 @@
-# discrete_wm
+# Speech Watermarking with Discrete Intermediate Representations

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Boosting Prompting Mechanisms for Zero-Shot Speech Synthesis">
+  <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Speech Watermarking with Discrete Intermediate Representations</title>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L7749G0HJZ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-L7749G0HJZ');
+</script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body" style="padding-bottom: 24px;">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Speech Watermarking with Discrete Intermediate Representations</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="#">Anonymous authors</a></span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">Paper under double-blind review</span>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<section class="section" style="padding-top: 0px;">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Speech watermarking techniques can proactively mitigate the potential harms of instant voice cloning techniques by embedding signals into speech that are invisible to humans but algorithmically detectable. Previous approaches typically embed watermark messages into the continuous space, while this paper propose DiscreteWM, a speech watermarking framework that hides watermarks into the discrete intermediate representations of speech. Specifically, we map speech into discrete latent space and hide watermarks by changing the modular arithmetic relation of discrete IDs. To ensure the imperceptibility of watermarks, we also propose a manipulator model to select the candidate tokens for reconstruction. Experimental results demonstrate that our framework surpasses the continuous counterparts in voice cloning detection and steganography tasks in terms of imperceptibility and robustness. Furthermore, DiscreteWM can encode 1 to 150 bits of watermark within a 1-second speech clip, allowing for a flexible inference strategy in various scenarios.
+          </p>
+        </div>
+
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+  </div>
+</section>
+
+
+
+<section class="hero teaser">
+  <div class="container is-max-desktop is-centered has-text-centered">
+    <div class="hero-body">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Overall Framework</h2>
+          <img src="./static/images/model_overview.jpg"
+                    class="interpolation-image"
+                    alt="Interpolate start reference image."/>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column">
+          <h2 class="title is-3">Speech Watermarking for Steganography (Section 4.2)</h2>
+          <div class="content">
+            <p>
+              We list the examples used in our evaluations here. For simplicity, we compare our method with two state-of-the-art baselines. The examples of these baselines are generated with their pre-trained model.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="columns is-centered has-text-centered  is-full-width">
+        <table class="table" style="background-color: transparent;">
+          <thead>
+            <tr>
+              <th align="center" width="80%"><strong>Ground Truth</strong></th>
+              <th align="center" width="30%"><strong>Chang Liu's</strong></th>
+              <th align="center" width="30%"><strong>WavMark</strong></th>
+              <th align="center" width="30%"><strong>Ours</strong></th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- <tr>
+              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/zero-shot_TTS/prompt/3.wav" type="audio/wav"></audio></td>
+              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/zero-shot_TTS/gt/3.wav" type="audio/wav"></audio></td>
+              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/zero-shot_TTS/valle-10s/3.wav" type="audio/wav"></audio></td>
+              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/zero-shot_TTS/finetune-10s/3.wav" type="audio/wav"></audio></td>
+            </tr>
+            <tr>
+              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/zero-shot_TTS/prompt/6.wav" type="audio/wav"></audio></td>
+              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/zero-shot_TTS/gt/6.wav" type="audio/wav"></audio></td>
+              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/zero-shot_TTS/valle-10s/6.wav" type="audio/wav"></audio></td>
+              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/zero-shot_TTS/finetune-10s/6.wav" type="audio/wav"></audio></td>
+            </tr> -->
+          </tbody>
+        </table>
+      </div>
+
+      <div class="columns is-centered has-text-centered  is-full-width">
+        <table class="table" style="background-color: transparent;">
+          <thead>
+            <tr>
+              <th align="center" width="80%"><strong>Ground Truth</strong></th>
+              <th align="center" width="30%"><strong>Chang Liu's</strong></th>
+              <th align="center" width="30%"><strong>WavMark</strong></th>
+              <th align="center" width="30%"><strong>Ours</strong></th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- <tr>
+              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/zero-shot_TTS/prompt/3.wav" type="audio/wav"></audio></td>
+              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/zero-shot_TTS/gt/3.wav" type="audio/wav"></audio></td>
+              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/zero-shot_TTS/valle-10s/3.wav" type="audio/wav"></audio></td>
+              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/zero-shot_TTS/finetune-10s/3.wav" type="audio/wav"></audio></td>
+            </tr>
+            <tr>
+              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/zero-shot_TTS/prompt/6.wav" type="audio/wav"></audio></td>
+              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/zero-shot_TTS/gt/6.wav" type="audio/wav"></audio></td>
+              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/zero-shot_TTS/valle-10s/6.wav" type="audio/wav"></audio></td>
+              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/zero-shot_TTS/finetune-10s/6.wav" type="audio/wav"></audio></td>
+            </tr>
+            <tr>
+              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/zero-shot_TTS/prompt/1.wav" type="audio/wav"></audio></td>
+              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/zero-shot_TTS/gt/1.wav" type="audio/wav"></audio></td>
+              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/zero-shot_TTS/valle-10s/1.wav" type="audio/wav"></audio></td>
+              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/zero-shot_TTS/finetune-10s/1.wav" type="audio/wav"></audio></td>
+            </tr>
+            <tr>
+              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/zero-shot_TTS/prompt/2.wav" type="audio/wav"></audio></td>
+              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/zero-shot_TTS/gt/2.wav" type="audio/wav"></audio></td>
+              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/zero-shot_TTS/valle-10s/2.wav" type="audio/wav"></audio></td>
+              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/zero-shot_TTS/finetune-10s/2.wav" type="audio/wav"></audio></td>
+            </tr>
+            <tr>
+              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/zero-shot_TTS/prompt/4.wav" type="audio/wav"></audio></td>
+              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/zero-shot_TTS/gt/4.wav" type="audio/wav"></audio></td>
+              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/zero-shot_TTS/valle-10s/4.wav" type="audio/wav"></audio></td>
+              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/zero-shot_TTS/finetune-10s/4.wav" type="audio/wav"></audio></td>
+            </tr>
+            <tr>
+              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/zero-shot_TTS/prompt/5.wav" type="audio/wav"></audio></td>
+              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/zero-shot_TTS/gt/5.wav" type="audio/wav"></audio></td>
+              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/zero-shot_TTS/valle-10s/5.wav" type="audio/wav"></audio></td>
+              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/zero-shot_TTS/finetune-10s/5.wav" type="audio/wav"></audio></td>
+            </tr> -->
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Licenses</h2>
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            Website source code based on the <a
+            href="https://github.com/nerfies/nerfies.github.io">Nerfies</a> project page.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
