@@ -138,10 +138,10 @@ body {
   border-radius: 5px;
 }
 
-.interpolation-image{
+td .interpolation-image{
   transition: 0.3s;
 }
-.interpolation-image:hover
+td .interpolation-image:hover
 {
 transform: scale(1.8);
 z-index: 10;

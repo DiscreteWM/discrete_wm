@@ -102,10 +102,10 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
         <div class="column">
-          <h2 class="title is-3">Speech Watermarking for Steganography (Section 4.2)</h2>
+          <h2 class="title is-3">Steganography</h2>
           <div class="content">
             <p>
-              We list the examples used in our evaluations here. For simplicity, we compare our method with two state-of-the-art baselines. The examples of these baselines are generated with their pre-trained model. The encoding capacities of Chang Liu's, WavMark, and Ours are set to 30 bps, 32 bps, 32 bps, respectively. Feel free to listen to the speech samples or zoom in the image.
+              We list the demo examples of steganography here. The examples of these baselines are generated with their pre-trained model. We embed approximately 30 bits of watermark information into each speech clip. Feel free to listen to the speech samples or zoom in the image.
             </p>
           </div>
         </div>
@@ -116,59 +116,190 @@
           <thead>
             <tr>
               <th align="center" width="25%"><strong>Ground Truth</strong></th>
-              <th align="center" width="25%"><strong>Chang Liu's</strong></th>
+              <th align="center" width="25%"><strong>Chang Liu's (30 bits)</strong></th>
+              <th align="center" width="25%"><strong>WavMark (32 bits)</strong></th>
+              <th align="center" width="25%"><strong>Ours (32 bits)</strong></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/exp1/gt/908_31957_000017_000001-0022.wav" type="audio/wav"></audio><img src="static/audio_sample/exp1/gt/908_31957_000017_000001-0022.png" class="interpolation-image" alt="Interpolate start reference image."/></td>
+              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/exp1/changliu/908_31957_000017_000001-0022.wav" type="audio/wav"></audio><img src="static/audio_sample/exp1/changliu/908_31957_000017_000001-0022.png" class="interpolation-image" alt="Interpolate start reference image."/></td>
+              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/exp1/wavmark/908_31957_000017_000001-0022.wav" type="audio/wav"></audio><img src="static/audio_sample/exp1/wavmark/908_31957_000017_000001-0022.png" class="interpolation-image" alt="Interpolate start reference image."/></td>
+              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/exp1/discretewm/908_31957_000017_000001-0022.wav" type="audio/wav"></audio><img src="static/audio_sample/exp1/discretewm/908_31957_000017_000001-0022.png" class="interpolation-image" alt="Interpolate start reference image."/></td>
+            </tr>
+            <tr>
+              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/exp1/gt/1089_134686_000015_000002-0074.wav" type="audio/wav"></audio><img src="static/audio_sample/exp1/gt/1089_134686_000015_000002-0074.png" class="interpolation-image" alt="Interpolate start reference image."/></td>
+              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/exp1/changliu/1089_134686_000015_000002-0074.wav" type="audio/wav"></audio><img src="static/audio_sample/exp1/changliu/1089_134686_000015_000002-0074.png" class="interpolation-image" alt="Interpolate start reference image."/></td>
+              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/exp1/wavmark/1089_134686_000015_000002-0074.wav" type="audio/wav"></audio><img src="static/audio_sample/exp1/wavmark/1089_134686_000015_000002-0074.png" class="interpolation-image" alt="Interpolate start reference image."/></td>
+              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/exp1/discretewm/1089_134686_000015_000002-0074.wav" type="audio/wav"></audio><img src="static/audio_sample/exp1/discretewm/1089_134686_000015_000002-0074.png" class="interpolation-image" alt="Interpolate start reference image."/></td>
+            </tr>
+            <tr>
+              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/exp1/gt/121_127105_000038_000001-0074.wav" type="audio/wav"></audio></td>
+              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/exp1/changliu/121_127105_000038_000001-0074.wav" type="audio/wav"></audio></td>
+              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/exp1/wavmark/121_127105_000038_000001-0074.wav" type="audio/wav"></audio></td>
+              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/exp1/discretewm/121_127105_000038_000001-0074.wav" type="audio/wav"></audio></td>
+            </tr>
+            <tr>
+              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/exp1/gt/237_126133_000042_000001-0046.wav" type="audio/wav"></audio></td>
+              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/exp1/changliu/237_126133_000042_000001-0046.wav" type="audio/wav"></audio></td>
+              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/exp1/wavmark/237_126133_000042_000001-0046.wav" type="audio/wav"></audio></td>
+              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/exp1/discretewm/237_126133_000042_000001-0046.wav" type="audio/wav"></audio></td>
+            </tr>
+            <tr>
+              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/exp1/gt/260_123288_000027_000003-0008.wav" type="audio/wav"></audio></td>
+              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/exp1/changliu/260_123288_000027_000003-0008.wav" type="audio/wav"></audio></td>
+              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/exp1/wavmark/260_123288_000027_000003-0008.wav" type="audio/wav"></audio></td>
+              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/exp1/discretewm/260_123288_000027_000003-0008.wav" type="audio/wav"></audio></td>
+            </tr>
+            <tr>
+              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/exp1/gt/1320_122617_000055_000002-0058.wav" type="audio/wav"></audio></td>
+              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/exp1/changliu/1320_122617_000055_000002-0058.wav" type="audio/wav"></audio></td>
+              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/exp1/wavmark/1320_122617_000055_000002-0058.wav" type="audio/wav"></audio></td>
+              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/exp1/discretewm/1320_122617_000055_000002-0058.wav" type="audio/wav"></audio></td>
+            </tr>
+            <tr>
+              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/exp1/gt/1580_141084_000009_000002-0079.wav" type="audio/wav"></audio></td>
+              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/exp1/changliu/1580_141084_000009_000002-0079.wav" type="audio/wav"></td>
+              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/exp1/wavmark/1580_141084_000009_000002-0079.wav" type="audio/wav"></audio></td>
+              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/exp1/discretewm/1580_141084_000009_000002-0079.wav" type="audio/wav"></audio></td>
+            </tr>
+            <tr>
+              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/exp1/gt/2300_131720_000010_000004-0095.wav" type="audio/wav"></audio></td>
+              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/exp1/changliu/2300_131720_000010_000004-0095.wav" type="audio/wav"></audio></td>
+              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/exp1/wavmark/2300_131720_000010_000004-0095.wav" type="audio/wav"></audio></td>
+              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/exp1/discretewm/2300_131720_000010_000004-0095.wav" type="audio/wav"></audio></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column">
+          <h2 class="title is-3">AI-Generated Speech Detection</h2>
+          <div class="content">
+            <p>
+              We list the demo examples of AI-generated speech detection here. The examples of these baselines are generated with their pre-trained model. Feel free to listen to the speech samples or zoom in the image.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="columns is-centered has-text-centered  is-full-width">
+        <table class="table" style="background-color: transparent;">
+          <thead>
+            <tr>
+              <th align="center" width="25%"><strong>Ground Truth</strong></th>
               <th align="center" width="25%"><strong>WavMark</strong></th>
+              <th align="center" width="25%"><strong>SeamlessWM</strong></th>
               <th align="center" width="25%"><strong>Ours</strong></th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/gt/908_31957_000017_000001-0022.wav" type="audio/wav"></audio><img src="static/audio_sample/gt/908_31957_000017_000001-0022.png" class="interpolation-image" alt="Interpolate start reference image."/></td>
-              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/changliu/908_31957_000017_000001-0022.wav" type="audio/wav"></audio><img src="static/audio_sample/changliu/908_31957_000017_000001-0022.png" class="interpolation-image" alt="Interpolate start reference image."/></td>
-              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/wavmark/908_31957_000017_000001-0022.wav" type="audio/wav"></audio><img src="static/audio_sample/wavmark/908_31957_000017_000001-0022.png" class="interpolation-image" alt="Interpolate start reference image."/></td>
-              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/discretewm/908_31957_000017_000001-0022.wav" type="audio/wav"></audio><img src="static/audio_sample/discretewm/908_31957_000017_000001-0022.png" class="interpolation-image" alt="Interpolate start reference image."/></td>
+              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/exp2/gt/237_126133_000055_000003.wav" type="audio/wav"></audio><img src="static/audio_sample/exp2/gt/237_126133_000055_000003.png" class="interpolation-image" alt="Interpolate start reference image."/></td>
+              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/exp2/wavmark/237_126133_000055_000003.wav" type="audio/wav"></audio><img src="static/audio_sample/exp2/wavmark/237_126133_000055_000003.png" class="interpolation-image" alt="Interpolate start reference image."/></td>
+              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/exp2/seamless/237_126133_000055_000003.wav" type="audio/wav"></audio><img src="static/audio_sample/exp2/seamless/237_126133_000055_000003.png" class="interpolation-image" alt="Interpolate start reference image."/></td>
+              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/exp2/discretewm/237_126133_000055_000003.wav" type="audio/wav"></audio><img src="static/audio_sample/exp2/discretewm/237_126133_000055_000003.png" class="interpolation-image" alt="Interpolate start reference image."/></td>
             </tr>
             <tr>
-              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/gt/121_127105_000038_000001-0074.wav" type="audio/wav"></audio><img src="static/audio_sample/gt/121_127105_000038_000001-0074.png" class="interpolation-image" alt="Interpolate start reference image."/></td>
-              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/changliu/121_127105_000038_000001-0074.wav" type="audio/wav"></audio><img src="static/audio_sample/changliu/121_127105_000038_000001-0074.png" class="interpolation-image" alt="Interpolate start reference image."/></td>
-              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/wavmark/121_127105_000038_000001-0074.wav" type="audio/wav"></audio><img src="static/audio_sample/wavmark/121_127105_000038_000001-0074.png" class="interpolation-image" alt="Interpolate start reference image."/></td>
-              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/discretewm/121_127105_000038_000001-0074.wav" type="audio/wav"></audio><img src="static/audio_sample/discretewm/121_127105_000038_000001-0074.png" class="interpolation-image" alt="Interpolate start reference image."/></td>
+              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/exp2/gt/1089_134686_000028_000002.wav" type="audio/wav"></audio><img src="static/audio_sample/exp2/gt/1089_134686_000028_000002.png" class="interpolation-image" alt="Interpolate start reference image."/></td>
+              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/exp2/wavmark/1089_134686_000028_000002.wav" type="audio/wav"></audio><img src="static/audio_sample/exp2/wavmark/1089_134686_000028_000002.png" class="interpolation-image" alt="Interpolate start reference image."/></td>
+              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/exp2/seamless/1089_134686_000028_000002.wav" type="audio/wav"></audio><img src="static/audio_sample/exp2/seamless/1089_134686_000028_000002.png" class="interpolation-image" alt="Interpolate start reference image."/></td>
+              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/exp2/discretewm/1089_134686_000028_000002.wav" type="audio/wav"></audio><img src="static/audio_sample/exp2/discretewm/1089_134686_000028_000002.png" class="interpolation-image" alt="Interpolate start reference image."/></td>
             </tr>
             <tr>
-              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/gt/237_126133_000042_000001-0046.wav" type="audio/wav"></audio><img src="static/audio_sample/gt/237_126133_000042_000001-0046.png" class="interpolation-image" alt="Interpolate start reference image."/></td>
-              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/changliu/237_126133_000042_000001-0046.wav" type="audio/wav"></audio><img src="static/audio_sample/changliu/237_126133_000042_000001-0046.png" class="interpolation-image" alt="Interpolate start reference image."/></td>
-              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/wavmark/237_126133_000042_000001-0046.wav" type="audio/wav"></audio><img src="static/audio_sample/wavmark/237_126133_000042_000001-0046.png" class="interpolation-image" alt="Interpolate start reference image."/></td>
-              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/discretewm/237_126133_000042_000001-0046.wav" type="audio/wav"></audio><img src="static/audio_sample/discretewm/237_126133_000042_000001-0046.png" class="interpolation-image" alt="Interpolate start reference image."/></td>
+              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/exp2/gt/1580_141083_000041_000006.wav" type="audio/wav"></audio></td>
+              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/exp2/wavmark/1580_141083_000041_000006.wav" type="audio/wav"></audio></td>
+              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/exp2/seamless/1580_141083_000041_000006.wav" type="audio/wav"></audio></td>
+              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/exp2/discretewm/1580_141083_000041_000006.wav" type="audio/wav"></audio></td>
             </tr>
             <tr>
-              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/gt/260_123288_000027_000003-0008.wav" type="audio/wav"></audio><img src="static/audio_sample/gt/260_123288_000027_000003-0008.png" class="interpolation-image" alt="Interpolate start reference image."/></td>
-              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/changliu/260_123288_000027_000003-0008.wav" type="audio/wav"></audio><img src="static/audio_sample/changliu/260_123288_000027_000003-0008.png" class="interpolation-image" alt="Interpolate start reference image."/></td>
-              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/wavmark/260_123288_000027_000003-0008.wav" type="audio/wav"></audio><img src="static/audio_sample/wavmark/260_123288_000027_000003-0008.png" class="interpolation-image" alt="Interpolate start reference image."/></td>
-              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/discretewm/260_123288_000027_000003-0008.wav" type="audio/wav"></audio><img src="static/audio_sample/discretewm/260_123288_000027_000003-0008.png" class="interpolation-image" alt="Interpolate start reference image."/></td>
+              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/exp2/gt/5142_33396_000012_000002.wav" type="audio/wav"></audio></td>
+              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/exp2/wavmark/5142_33396_000012_000002.wav" type="audio/wav"></audio></td>
+              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/exp2/seamless/5142_33396_000012_000002.wav" type="audio/wav"></audio></td>
+              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/exp2/discretewm/5142_33396_000012_000002.wav" type="audio/wav"></audio></td>
             </tr>
             <tr>
-              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/gt/1089_134686_000015_000002-0074.wav" type="audio/wav"></audio><img src="static/audio_sample/gt/1089_134686_000015_000002-0074.png" class="interpolation-image" alt="Interpolate start reference image."/></td>
-              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/changliu/1089_134686_000015_000002-0074.wav" type="audio/wav"></audio><img src="static/audio_sample/changliu/1089_134686_000015_000002-0074.png" class="interpolation-image" alt="Interpolate start reference image."/></td>
-              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/wavmark/1089_134686_000015_000002-0074.wav" type="audio/wav"></audio><img src="static/audio_sample/wavmark/1089_134686_000015_000002-0074.png" class="interpolation-image" alt="Interpolate start reference image."/></td>
-              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/discretewm/1089_134686_000015_000002-0074.wav" type="audio/wav"></audio><img src="static/audio_sample/discretewm/1089_134686_000015_000002-0074.png" class="interpolation-image" alt="Interpolate start reference image."/></td>
+              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/exp2/gt/5683_32866_000031_000000.wav" type="audio/wav"></audio></td>
+              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/exp2/wavmark/5683_32866_000031_000000.wav" type="audio/wav"></audio></td>
+              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/exp2/seamless/5683_32866_000031_000000.wav" type="audio/wav"></audio></td>
+              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/exp2/discretewm/5683_32866_000031_000000.wav" type="audio/wav"></audio></td>
             </tr>
             <tr>
-              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/gt/1320_122617_000055_000002-0058.wav" type="audio/wav"></audio><img src="static/audio_sample/gt/1320_122617_000055_000002-0058.png" class="interpolation-image" alt="Interpolate start reference image."/></td>
-              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/changliu/1320_122617_000055_000002-0058.wav" type="audio/wav"></audio><img src="static/audio_sample/changliu/1320_122617_000055_000002-0058.png" class="interpolation-image" alt="Interpolate start reference image."/></td>
-              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/wavmark/1320_122617_000055_000002-0058.wav" type="audio/wav"></audio><img src="static/audio_sample/wavmark/1320_122617_000055_000002-0058.png" class="interpolation-image" alt="Interpolate start reference image."/></td>
-              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/discretewm/1320_122617_000055_000002-0058.wav" type="audio/wav"></audio><img src="static/audio_sample/discretewm/1320_122617_000055_000002-0058.png" class="interpolation-image" alt="Interpolate start reference image."/></td>
+              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/exp2/gt/6829_68769_000058_000002.wav" type="audio/wav"></audio></td>
+              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/exp2/wavmark/6829_68769_000058_000002.wav" type="audio/wav"></audio></td>
+              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/exp2/seamless/6829_68769_000058_000002.wav" type="audio/wav"></audio></td>
+              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/exp2/discretewm/6829_68769_000058_000002.wav" type="audio/wav"></audio></td>
             </tr>
             <tr>
-              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/gt/1580_141084_000009_000002-0079.wav" type="audio/wav"></audio><img src="static/audio_sample/gt/1580_141084_000009_000002-0079.png" class="interpolation-image" alt="Interpolate start reference image."/></td>
-              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/changliu/1580_141084_000009_000002-0079.wav" type="audio/wav"></audio><img src="static/audio_sample/changliu/1580_141084_000009_000002-0079.png" class="interpolation-image" alt="Interpolate start reference image."/></td>
-              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/wavmark/1580_141084_000009_000002-0079.wav" type="audio/wav"></audio><img src="static/audio_sample/wavmark/1580_141084_000009_000002-0079.png" class="interpolation-image" alt="Interpolate start reference image."/></td>
-              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/discretewm/1580_141084_000009_000002-0079.wav" type="audio/wav"></audio><img src="static/audio_sample/discretewm/1580_141084_000009_000002-0079.png" class="interpolation-image" alt="Interpolate start reference image."/></td>
+              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/exp2/gt/7176_88083_000002_000004.wav" type="audio/wav"></audio></td>
+              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/exp2/wavmark/7176_88083_000002_000004.wav" type="audio/wav"></td>
+              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/exp2/seamless/7176_88083_000002_000004.wav" type="audio/wav"></audio></td>
+              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/exp2/discretewm/7176_88083_000002_000004.wav" type="audio/wav"></audio></td>
             </tr>
             <tr>
-              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/gt/2300_131720_000010_000004-0095.wav" type="audio/wav"></audio><img src="static/audio_sample/gt/2300_131720_000010_000004-0095.png" class="interpolation-image" alt="Interpolate start reference image."/></td>
-              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/changliu/2300_131720_000010_000004-0095.wav" type="audio/wav"></audio><img src="static/audio_sample/changliu/2300_131720_000010_000004-0095.png" class="interpolation-image" alt="Interpolate start reference image."/></td>
-              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/wavmark/2300_131720_000010_000004-0095.wav" type="audio/wav"></audio><img src="static/audio_sample/wavmark/2300_131720_000010_000004-0095.png" class="interpolation-image" alt="Interpolate start reference image."/></td>
-              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/discretewm/2300_131720_000010_000004-0095.wav" type="audio/wav"></audio><img src="static/audio_sample/discretewm/2300_131720_000010_000004-0095.png" class="interpolation-image" alt="Interpolate start reference image."/></td>
+              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/exp2/gt/8555_284447_000032_000000.wav" type="audio/wav"></audio></td>
+              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/exp2/wavmark/8555_284447_000032_000000.wav" type="audio/wav"></audio></td>
+              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/exp2/seamless/8555_284447_000032_000000.wav" type="audio/wav"></audio></td>
+              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/exp2/discretewm/8555_284447_000032_000000.wav" type="audio/wav"></audio></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column">
+          <h2 class="title is-3">Flexible Encoding Capacity</h2>
+          <div class="content">
+            <p>
+              We visualize the watermarked speech of DiscreteWM with different encoding capacity. Ours-700bits denotes we embed 700bits of information into the corresponding speech clip, <strong>which is able to include the url of our demo page (41 bytes = 328 bits) and add error correction mechanism for it.</strong>
+              Feel free to listen to the speech samples or zoom in the image.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="columns is-centered has-text-centered  is-full-width">
+        <table class="table" style="background-color: transparent;">
+          <thead>
+            <tr>
+              <th align="center" width="25%"><strong>Ground Truth</strong></th>
+              <th align="center" width="25%"><strong>Ours-10bits</strong></th>
+              <th align="center" width="25%"><strong>Ours-100bits</strong></th>
+              <th align="center" width="25%"><strong>Ours-700bits</strong></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/encoding_capacity/gt/1580_141084_000009_000002-0079.wav" type="audio/wav"></audio><img src="static/audio_sample/encoding_capacity/gt/1580_141084_000009_000002-0079.png" class="interpolation-image" alt="Interpolate start reference image."/></td>
+              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/encoding_capacity/discretewm/10_1580_141084_000009_000002-0079.wav" type="audio/wav"></audio><img src="static/audio_sample/encoding_capacity/discretewm/10_1580_141084_000009_000002-0079.png" class="interpolation-image" alt="Interpolate start reference image."/></td>
+              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/encoding_capacity/discretewm/100_1580_141084_000009_000002-0079.wav" type="audio/wav"></audio><img src="static/audio_sample/encoding_capacity/discretewm/100_1580_141084_000009_000002-0079.png" class="interpolation-image" alt="Interpolate start reference image."/></td>
+              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/encoding_capacity/discretewm/700_1580_141084_000009_000002-0079.wav" type="audio/wav"></audio><img src="static/audio_sample/encoding_capacity/discretewm/700_1580_141084_000009_000002-0079.png" class="interpolation-image" alt="Interpolate start reference image."/></td>
+            </tr>
+            <tr>
+              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/encoding_capacity/gt/237_126133_000042_000001-0046.wav" type="audio/wav"></audio><img src="static/audio_sample/encoding_capacity/gt/237_126133_000042_000001-0046.png" class="interpolation-image" alt="Interpolate start reference image."/></td>
+              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/encoding_capacity/discretewm/10_237_126133_000042_000001-0046.wav" type="audio/wav"></audio><img src="static/audio_sample/encoding_capacity/discretewm/10_237_126133_000042_000001-0046.png" class="interpolation-image" alt="Interpolate start reference image."/></td>
+              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/encoding_capacity/discretewm/100_237_126133_000042_000001-0046.wav" type="audio/wav"></audio><img src="static/audio_sample/encoding_capacity/discretewm/100_237_126133_000042_000001-0046.png" class="interpolation-image" alt="Interpolate start reference image."/></td>
+              <td style="text-align: center;"><audio controls="" ><source src="static/audio_sample/encoding_capacity/discretewm/700_237_126133_000042_000001-0046.wav" type="audio/wav"></audio><img src="static/audio_sample/encoding_capacity/discretewm/700_237_126133_000042_000001-0046.png" class="interpolation-image" alt="Interpolate start reference image."/></td>
             </tr>
           </tbody>
         </table>
