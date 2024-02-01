@@ -68,7 +68,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Speech watermarking techniques can proactively mitigate the potential harms of instant voice cloning techniques by embedding signals into speech that are invisible to humans but algorithmically detectable. Previous approaches typically embed watermark messages into the continuous space, while this paper propose DiscreteWM, a speech watermarking framework that hides watermarks into the discrete intermediate representations of speech. Specifically, we map speech into discrete latent space and hide watermarks by changing the modular arithmetic relation of discrete IDs. To ensure the imperceptibility of watermarks, we also propose a manipulator model to select the candidate tokens for reconstruction. Experimental results demonstrate that our framework surpasses the continuous counterparts in voice cloning detection and steganography tasks in terms of imperceptibility and robustness. Furthermore, DiscreteWM can encode 1 to 150 bits of watermark within a 1-second speech clip, allowing for a flexible inference strategy in various scenarios.
+            Speech watermarking techniques can proactively mitigate the potential harmful consequences of instant voice cloning techniques. These techniques involve the insertion of signals into speech that are imperceptible to humans but can be detected by algorithms. Previous approaches typically embed watermark messages into continuous space. However, intuitively, embedding watermark information into robust discrete latent space can significantly improve the robustness of watermarking systems. In this paper, we propose DiscreteWM, a novel speech watermarking framework that injects watermarks into the discrete intermediate representations of speech. Specifically, we map speech into discrete latent space with a vector-quantized autoencoder and inject watermarks by changing the modular arithmetic relation of discrete IDs. To ensure the imperceptibility of watermarks, we also propose a manipulator model to select the candidate tokens for watermark embedding. Experimental results demonstrate that our framework achieves state-of-the-art performance in robustness and imperceptibility, simultaneously. Moreover, our flexible frame-wise approach can serve as an efficient solution for both voice cloning detection and information hiding. Additionally, DiscreteWM can encode 1 to 150 bits of watermark information within a 1-second speech clip, indicating its encoding capacity.
           </p>
         </div>
 
@@ -102,10 +102,10 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
         <div class="column">
-          <h2 class="title is-3">Steganography</h2>
+          <h2 class="title is-3">Information Hiding</h2>
           <div class="content">
             <p>
-              We list the demo examples of steganography here. The examples of these baselines are generated with their pre-trained model. We embed approximately 30 bits of watermark information into each speech clip. Feel free to listen to the speech samples or zoom in the image.
+              We list the demo examples of the information hiding experiment here. The examples of these baselines are generated with their pre-trained model. We embed approximately 30 bits of watermark information into each speech clip. Feel free to listen to the speech samples or zoom in the image.
             </p>
           </div>
         </div>
@@ -271,7 +271,7 @@
           <h2 class="title is-3">Flexible Encoding Capacity</h2>
           <div class="content">
             <p>
-              We visualize the watermarked speech of DiscreteWM with different encoding capacity. Ours-700bits denotes we embed 700bits of information into the corresponding speech clip, <strong>which is able to include the url of our demo page (41 bytes = 328 bits) and add error correction mechanism for it.</strong>
+              We visualize the watermarked speech of DiscreteWM with different encoding capacity. In the following table, 700bits denotes we embed 700bits of information into the corresponding speech clip, <strong>which is able to include the url of our demo page (41 bytes = 328 bits) and add error correction mechanism for it.</strong>
               Feel free to listen to the speech samples or zoom in the image.
             </p>
           </div>
@@ -283,9 +283,9 @@
           <thead>
             <tr>
               <th align="center" width="25%"><strong>Ground Truth</strong></th>
-              <th align="center" width="25%"><strong>Ours-10bits</strong></th>
-              <th align="center" width="25%"><strong>Ours-100bits</strong></th>
-              <th align="center" width="25%"><strong>Ours-700bits</strong></th>
+              <th align="center" width="25%"><strong>10bits</strong></th>
+              <th align="center" width="25%"><strong>100bits</strong></th>
+              <th align="center" width="25%"><strong>700bits</strong></th>
             </tr>
           </thead>
           <tbody>
